@@ -1,0 +1,184 @@
+<<<<<<< HEAD
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5fff8; /* verde muy claro */
+  color: #2f4f4f; /* gris profundo */
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #2e8b57; /* verde bosque */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+header h3 {
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 1.1em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+/* Contenido principal */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Secciones */
+section {
+  background-color: #ffffff;
+  border-left: 6px solid #32cd32; /* verde brillante */
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(50, 205, 50, 0.3);
+}
+
+h2 {
+  color: #2e8b57;
+  margin-top: 0;
+}
+
+/* Lista con íconos */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "🌿 ";
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2f4f4f;
+  color: #f0fff0;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* Línea divisoria */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #2e8b57;
+  width: 80%;
+  margin: 30px auto;
+=======
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5fff8; /* verde muy claro */
+  color: #2f4f4f; /* gris profundo */
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #2e8b57; /* verde bosque */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+header h3 {
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 1.1em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+/* Contenido principal */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Secciones */
+section {
+  background-color: #ffffff;
+  border-left: 6px solid #32cd32; /* verde brillante */
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(50, 205, 50, 0.3);
+}
+
+h2 {
+  color: #2e8b57;
+  margin-top: 0;
+}
+
+/* Lista con íconos */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "🌿 ";
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2f4f4f;
+  color: #f0fff0;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* Línea divisoria */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #2e8b57;
+  width: 80%;
+  margin: 30px auto;
+>>>>>>> f4418a7c1020f1c19d89610148385eba891b8d77
+}
