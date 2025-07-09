@@ -39,6 +39,16 @@ header h3 {
   font-weight: normal;
 }
 
+h1:hover{
+  color: rgb(251, 253, 225);
+  text-decoration: none;
+  animation-duration: 0.5s;
+}
+h3:hover{
+  color: rgba(232, 245, 117, 0.685);
+  text-decoration:none;
+  font-weight: bold;
+}
 /* ====================================
    🧩 CONTENEDOR PRINCIPAL (MAIN)
 ==================================== */
