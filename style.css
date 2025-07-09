@@ -38,7 +38,12 @@ header h1 {
 header h3 {
   font-weight: normal;
 }
-
+h1,h2,h3
+.resaltado {
+  color: rgb(10, 10, 10);
+  font-weight: 900;
+  font-family: fantasy;
+  animation: aparecer 2s ease;}
 h1:hover{
   color: rgb(251, 253, 225);
   text-decoration: none;
