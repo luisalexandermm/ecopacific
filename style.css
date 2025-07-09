@@ -1,9 +1,15 @@
+/* ====================================
+   🔧 RESET GENERAL
+==================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ====================================
+   🎨 ESTILOS GENERALES DEL BODY
+==================================== */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f0fff4;
@@ -12,6 +18,9 @@ body {
   padding: 0 20px;
 }
 
+/* ====================================
+   🎯 ENCABEZADO (HEADER)
+==================================== */
 header {
   text-align: center;
   padding: 30px 0;
@@ -30,12 +39,18 @@ header h3 {
   font-weight: normal;
 }
 
+/* ====================================
+   🧩 CONTENEDOR PRINCIPAL (MAIN)
+==================================== */
 main {
   max-width: 1000px;
   margin: 30px auto;
   padding: 20px;
 }
 
+/* ====================================
+   📦 SECCIONES GENERALES
+==================================== */
 section {
   margin-bottom: 40px;
   padding: 20px;
@@ -45,6 +60,9 @@ section {
   animation: fadeIn 1s ease-in-out;
 }
 
+/* ====================================
+   📌 LISTAS
+==================================== */
 ul {
   padding-left: 20px;
 }
@@ -53,14 +71,9 @@ li {
   margin-bottom: 8px;
 }
 
-footer {
-  text-align: center;
-  padding: 15px 0;
-  background: #2f4f4f;
-  color: white;
-  margin-top: 30px;
-}
-
+/* ====================================
+   🖼️ IMÁGENES
+==================================== */
 .hero-img, .section-img {
   width: 100%;
   max-height: 300px;
@@ -69,6 +82,9 @@ footer {
   margin: 15px 0;
 }
 
+/* ====================================
+   🌅 INTRO SECCIÓN (RESPONSIVE FLEX)
+==================================== */
 .intro {
   display: flex;
   flex-direction: column;
@@ -91,13 +107,26 @@ footer {
   }
 }
 
-/* Animaciones */
+/* ====================================
+   🔻 PIE DE PÁGINA (FOOTER)
+==================================== */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #2f4f4f;
+  color: white;
+  margin-top: 30px;
+}
+
+/* ====================================
+   ✨ ANIMACIONES
+==================================== */
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
-  from {opacity: 0; transform: translateY(-30px);}
-  to {opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
