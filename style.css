@@ -35,7 +35,22 @@ header h1 {
 header h3 {
   font-weight: normal;
 }
-
+h1,h2,h3
+.resaltado {
+  color: rgb(10, 10, 10);
+  font-weight: 900;
+  font-family: fantasy;
+  animation: aparecer 2s ease;}
+h1:hover{
+  color: rgb(251, 253, 225);
+  text-decoration: none;
+  animation-duration: 0.5s;
+}
+h3:hover{
+  color: rgba(2, 3, 0, 0.685);
+  text-decoration:none;
+  font-weight: bold;
+}
 /* ====================================
    🧩 CONTENEDOR PRINCIPAL (MAIN)
 ==================================== */
@@ -44,7 +59,21 @@ main {
   margin: 30px auto;
   padding: 20px;
 }
-
+#paraque{
+         margin-bottom: 40px;
+         padding: 20px;
+         background: #ffffff;
+         border-radius: 12px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+         animation: fadeIn 1s ease-in-out;
+}
+ .par-img{
+     width: 100%;
+     max-height: 300px;
+     object-fit: cover;
+     border-radius: 12px;
+     margin: 15px 0;
+ }
 /* ====================================
    📦 SECCIÓN: INTRO
 ==================================== */
