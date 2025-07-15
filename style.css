@@ -11,12 +11,22 @@ body {
   line-height: 1.6;
   padding: 0 20px;
 }
-/* ENCABEZADO */ 
+
+/* ENCABEZADO */
 header {
-  background: #12913c;
   padding: 25px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  animation: cambio-color 20s infinite;
+}
+
+/* Fondo animado para header */
+@keyframes cambio-color {
+  0%   { background-color: #81c784; }
+  25%  { background-color: #e0f7fa; }
+  50%  { background-color: #fff9e0; }
+  75%  { background-color: #388e3c; }
+  100% { background-color: #e5f0e5; }
 }
 
 .header-content {
@@ -40,24 +50,26 @@ header {
   width: 100%;
 }
 
+/* LETRAS OSCURAS CON SOMBRA PARA CONTRASTE */
+header h1, header h3 {
+  color: #1b2b1b; /* Verde oscuro grisáceo */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
 header h1 {
   font-size: 2.5em;
-  color: white;
-  margin-bottom: 10px;
-  animation: fadeInDown 1s ease-in-out;
+  font-weight: bold;
 }
 
 header h3 {
+  font-size: 1.2em;
   font-weight: normal;
-  color: white;
 }
 
-h1:hover {
-  color: black;
-}
-
-h3:hover {
-  color: rgba(2, 3, 0, 0.7);
+h1:hover, h3:hover {
+  color: #000000;
   font-weight: bold;
 }
 
@@ -146,7 +158,8 @@ main {
   }
 }
 
-.features, .tech, .why {
+.features, .tech, .why, .intro, .queson {
+  text-align: justify;
   margin-bottom: 40px;
   padding: 20px;
   border-radius: 12px;
@@ -164,6 +177,14 @@ main {
 
 .why {
   background: #c8e6c9;
+}
+
+.intro {
+  background-color: #e5f0e5;
+}
+
+.queson {
+  background-color: #c8e6c9;
 }
 
 /* IMÁGENES */
@@ -190,10 +211,10 @@ footer {
 /* ANIMACIONES */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
