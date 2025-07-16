@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f1f8f4 #388e3c #fcf3d2 ;
+  background: #f1f8f4;
   color: #161816;
   line-height: 1.6;
   padding: 0 20px;
@@ -15,20 +15,11 @@ body {
 /* ENCABEZADO */
 header {
   padding: 25px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(190, 171, 66, 0.644);
   border-radius: 10px;
-  animation: cambio-color 20s infinite;
-}
+  background: linear-gradient(135deg, #3db143a4 0%, #c8e6c9 25%, #fff9e0 50%, #e0f7fa 75%, #eef0ee 100%);
 
-/* Fondo animado para header */
-@keyframes cambio-color {
-  0%   { background-color: #81c784; }
-  25%  { background-color: #acf2fc; }
-  50%  { background-color: #fcf3d2; }
-  75%  { background-color: #388e3c; }
-  100% { background-color: #fdfdfd; }
 }
-
 .header-content {
   display: flex;
   align-items: center;
