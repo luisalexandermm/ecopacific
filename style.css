@@ -23,10 +23,10 @@ header {
 /* Fondo animado para header */
 @keyframes cambio-color {
   0%   { background-color: #81c784; }
-  25%  { background-color: #e0f7fa; }
-  50%  { background-color: #fff9e0; }
+  25%  { background-color: #acf2fc; }
+  50%  { background-color: #fcf3d2; }
   75%  { background-color: #388e3c; }
-  100% { background-color: #e5f0e5; }
+  100% { background-color: #fdfdfd; }
 }
 
 .header-content {
