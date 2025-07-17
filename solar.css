@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BASE DEL SITIO ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* ========== ENCABEZADO ========== */
+.energia-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff9c4; /* amarillo claro */
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.8s ease;
+  margin-bottom: 30px;
+}
+
+.energia-icono {
+  width: 65px;
+  height: auto;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.energia-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* ========== CONTENIDO PRINCIPAL ========== */
+.subpagina {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.subpagina section {
+  margin-bottom: 30px;
+}
+
+.subpagina h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222222;
+  border-bottom: 2px solid #fdd835;
+  padding-bottom: 5px;
+}
+
+.subpagina p, 
+.subpagina li {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.subpagina ul {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.subpagina li {
+  margin-bottom: 8px;
+}
+
+/* ========== BOTÓN VOLVER ========== */
+.volver-inicio {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.volver-inicio a {
+  display: inline-block;
+  background: #fff59d;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.volver-inicio a:hover {
+  background: #ffee58;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 15px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
