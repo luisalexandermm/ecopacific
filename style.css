@@ -296,27 +296,27 @@ section {
 
 /* === Temas por tipo de energía === */
 .solar {
-  background: linear-gradient(135deg, #faeeca, #f7eec9);
+  background: linear-gradient(135deg, #fae996, #fafafa);
   color: #3a3000;
 }
 
 .eolica {
-  background: linear-gradient(135deg, #b2ebf2, #4dd0e1);
+  background: linear-gradient(135deg, #b2ebf2, #ffffff);
   color: #003c46;
 }
 
 .hidraulica {
-  background: linear-gradient(135deg, #cee4f5, #d1e4f3);
+  background: linear-gradient(135deg, #cee4f5, #fcfcfc);
   color: #ffffff;
 }
 
 .geotermica {
-  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  background: linear-gradient(135deg, #dcbee9, #ffffff);
   color: #f3e5f5;
 }
  
 .biomasa {
-  background: linear-gradient(135deg, #96e69a, #90e695);
+  background: linear-gradient(135deg, #dafcdc, #ffffff);
   color: #e8f5e9;
 }
 
