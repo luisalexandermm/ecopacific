@@ -192,7 +192,116 @@ section {
   margin-top: 15px;
   font-weight: bold;
 }
+/* ========== SUBPÁGINAS ENERGÍA RENOVABLE ========== */
+.subpagina {
+  display: none;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+.subpagina header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.subpagina .logo {
+  width: 60px;
+  height: auto;
+}
+
+.subpagina h2 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+}
+
+.subpagina p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Mostrar solo la subpágina activa con animación */
+#solar:target,
+#eolica:target,
+#hidraulica:target,
+#geotermica:target,
+#biomasa:target {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos diferenciados por tipo */
+#solar.subpagina {
+  border-left: 6px solid #fbc02d;
+  background-color: #fffde7;
+  animation: solarAnim 0.8s ease-in-out;
+}
+
+#eolica.subpagina {
+  border-left: 6px solid #81d4fa;
+  background-color: #e1f5fe;
+  animation: eolicaAnim 0.8s ease-in-out;
+}
+
+#hidraulica.subpagina {
+  border-left: 6px solid #4fc3f7;
+  background-color: #e0f7fa;
+  animation: hidraulicaAnim 0.8s ease-in-out;
+}
+
+#geotermica.subpagina {
+  border-left: 6px solid #ff8a65;
+  background-color: #fbe9e7;
+  animation: geotermicaAnim 0.8s ease-in-out;
+}
+
+#biomasa.subpagina {
+  border-left: 6px solid #8bc34a;
+  background-color: #f1f8e9;
+  animation: biomasaAnim 0.8s ease-in-out;
+}
+
+/* ========== ANIMACIONES POR SUBPÁGINA ========== */
+
+/* Solar: Fade + escalar */
+@keyframes solarAnim {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Eólica: Fade + deslizar desde la izquierda */
+@keyframes eolicaAnim {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Hidráulica: Fade + deslizar desde la derecha */
+@keyframes hidraulicaAnim {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Geotérmica: Fade + desde abajo */
+@keyframes geotermicaAnim {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Biomasa: Fade + rotación ligera */
+@keyframes biomasaAnim {
+  from { opacity: 0; transform: rotate(-2deg) scale(0.97); }
+  to   { opacity: 1; transform: rotate(0deg) scale(1); }
+}
 /* ========== FOOTER ========== */
 footer {
   text-align: center;
