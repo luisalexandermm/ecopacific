@@ -242,6 +242,21 @@ section {
 }
 
 /* Estilos diferenciados por tipo */
+
+.solar {
+  background: linear-gradient(135deg, #f8c425, #fdd835);
+  color: #3a3000;
+}
+.energia-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+.energia-icono {
+  width: 60px;
+  height: auto;
+}
 #solar.subpagina {
   border-left: 6px solid #fdf7e6;
   background-color: #ffffff;
