@@ -81,10 +81,11 @@ h1:hover, h3:hover {
 /* ========== NAVBAR ========== */
 .navbar {
   margin-top: 20px;
-  background-color: #3db143;
-  padding: 10px 0;
+  background: linear-gradient(135deg, #13991a 0%, #bbe2bc 25%, #fff7d7 50%, #daf8fc 75%, #eef0ee 100%);
+  padding: 10px 0; color: #000;
   border-radius: 10px;
   border: 2px solid #e5f0e5;
+  box-shadow: 10px;
 }
 
 .navbar ul {
@@ -100,7 +101,7 @@ h1:hover, h3:hover {
 .navbar a,
 .navbar summary {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   padding: 12px 15px;
   border-radius: 10px;
@@ -234,7 +235,7 @@ section {
 #eolica:target,
 #hidraulica:target,
 #geotermica:target,
-#biomasa:target {
+#biomasa:target { 
   display: block;
   opacity: 1;
   transform: translateY(0);
@@ -242,9 +243,9 @@ section {
 
 /* Estilos diferenciados por tipo */
 #solar.subpagina {
-  border-left: 6px solid #fbc02d;
-  background-color: #fffde7;
-  animation: solarAnim 0.8s ease-in-out;
+  border-left: 6px solid #f8e7bc;
+  background-color: #faf8e0;
+  animation: solarAnim 0.8s ease-in-out; 
 }
 
 #eolica.subpagina {
@@ -270,6 +271,77 @@ section {
   background-color: #f1f8e9;
   animation: biomasaAnim 0.8s ease-in-out;
 } 
+/* === Estilos generales para subpáginas de energía === */
+.subpagina {
+  margin: 50px 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  color: #fff;
+  animation: fadeInUp 1.2s ease;
+}
+
+.energia-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.energia-icono {
+  width: 60px;
+  height: auto;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* === Temas por tipo de energía === */
+.solar {
+  background: linear-gradient(135deg, #faeeca, #f7eec9);
+  color: #3a3000;
+}
+
+.eolica {
+  background: linear-gradient(135deg, #b2ebf2, #4dd0e1);
+  color: #003c46;
+}
+
+.hidraulica {
+  background: linear-gradient(135deg, #cee4f5, #d1e4f3);
+  color: #ffffff;
+}
+
+.geotermica {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  color: #f3e5f5;
+}
+ 
+.biomasa {
+  background: linear-gradient(135deg, #96e69a, #90e695);
+  color: #e8f5e9;
+}
+
+/* === Animaciones === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.8;
+  }
+}
 
 /* ========== ANIMACIONES POR SUBPÁGINA ========== */
 
