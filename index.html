@@ -1,66 +1,119 @@
-<!DOCTYPE html>
+¿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Futuro Solar</title>
-  <link rel="icon" type="image/png" href="img/logoeco.pg-removebg-preview.png" />
+  <title>Eco Pacific</title>
+  <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="style.css" />
-</head> 
+</head>
 <body>
+
+  <!-- Encabezado con logo y descripción -->
   <header>
     <div class="header-content">
-      <img src="img/logoeco.pg-removebg-preview.png" alt="Logo Eco Pacific" class="logo">
+      <img src="img/logoeco.pg-removebg-preview.png" alt="Logo Eco Pacific" class="logo" />
       <div class="header-text">
         <h1>Eco Pacific ♻</h1>
-        <h3>Energía renovable limpia e innovadora para un futuro sostenible en armonía con el planeta.</h3>
+        <h3>Soluciones sostenibles con energía renovable para un futuro limpio</h3>
       </div>
     </div>
-  </header> 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#que-son-los-paneles-solares">¿Qué son los paneles solares?</a></li>
-      <li><a href="#ventajas-del-uso-solar">Ventajas del uso solar</a></li>
-      <li><a href="#tecnologia-avanzada">Tecnología avanzada</a></li>
-      <li><a href="#por-que-energia-renovable">¿Por qué energía renovable?</a></li>
-      <li><a href="#energia-solar"> Energía solar</a></li>
-    </ul>
-  </nav>
-    
+
+    <!-- Primer navbar: Tipos de energía renovable -->
+    <nav class="navbar">
+      <ul>
+        <li>
+          <details>
+            <summary>Tipos de energía renovable</summary>
+            <ul>
+              <li><a href="#solar">Energía Solar</a></li>
+              <li><a href="#eolica">Energía Eólica</a></li>
+              <li><a href="#hidraulica">Energía Hidráulica</a></li>
+              <li><a href="#geotermica">Energía Geotérmica</a></li>
+              <li><a href="#biomasa">Biomasa</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Segundo navbar: Conceptos básicos -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#intro">¿Qué es la energía renovable?</a></li>
+        <li><a href="#importancia">¿Por qué es importante?</a></li>
+        <li><a href="#impacto">Impacto ambiental</a></li>
+        <li><a href="#usos">Usos comunes</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <section class="queson"><h2>Energía solar</h2>
-      <p>La energía solar representa una de las energías renovables más eficientes en el planeta puesto que no requiere partes móviles y tampoco necesita de derivados del petróleo para su funcionamiento, lo que a largo plazo resulta como una forma sustentable de energía debido a su funcionamiento, practicidad y costo.
-         Además dado a que los sistemas eléctricos convencionales han contribuido grandemente al cambio climático y al calentamiento global esta iniciativa sostenible busca generar nuevas formas para aprovechar la energía eléctrica sin necesidad de generar grandes afectaciones al medio ambiente.</p>
-    </section>
-    <section class="intro" id="que-son-los-paneles-solares">
-      <img src="img/panel solar .png" alt="Paneles solares" class="hero-img">
-      <div>
-        <h2>🔆 ¿Qué son los paneles solares?</h2>
-        <p>Dispositivos que convierten la luz del sol en energía eléctrica. Son una solución limpia, eficiente y silenciosa.</p>
-      </div>
+    <!-- Secciones básicas -->
+    <section id="intro" class="queson">
+      <h2>¿Qué es la energía renovable?</h2>
+      <p>Es aquella que se obtiene de fuentes naturales inagotables, como el sol, el viento, el agua o la biomasa. Es limpia, accesible y ayuda a reducir la contaminación ambiental.</p>
     </section>
 
-    <section class="features" id="ventajas-del-uso-solar">
-      <h2>🚀 Ventajas del uso solar</h2>
+    <section id="importancia" class="features">
+      <h2>¿Por qué es importante?</h2>
       <ul>
-        <li>Reducción de costos a largo plazo</li>
-        <li>Disminuye la huella ambiental</li>
-        <li>Autonomía energética en zonas remotas</li>
+        <li>Reduce las emisiones de CO₂</li>
+        <li>Contribuye a combatir el cambio climático</li>
+        <li>Garantiza una energía sostenible para el futuro</li>
       </ul>
     </section>
 
-    <section class="tech" id="tecnologia-avanzada">
-      <h2>🛰️ Tecnología avanzada</h2>
-      <p>Los nuevos paneles incluyen celdas bifaciales, seguimiento solar automático y materiales ultraligeros.</p>
+    <section id="impacto" class="tech">
+      <h2>Impacto ambiental</h2>
+      <p>A diferencia de las energías fósiles, las renovables no emiten gases contaminantes ni residuos peligrosos, ayudando a conservar el medio ambiente.</p>
     </section>
 
-    <section class="why" id="por-que-energia-renovable">
-      <h2>🌍 ¿Por qué energía renovable?</h2>
-      <p>Es la clave para combatir el cambio climático, asegurar la sostenibilidad y avanzar hacia un futuro más limpio.</p>
+    <section id="usos" class="why">
+      <h2>Usos comunes</h2>
+      <p>Se usan en hogares, industrias, transporte y sistemas agrícolas. Los paneles solares, turbinas eólicas y plantas hidroeléctricas son ejemplos comunes.</p>
     </section>
-  </main> 
+
+    <!-- Secciones de tipos de energía -->
+    <section id="solar" class="queson">
+      <h2>☀ Energía Solar</h2>
+      <p>Transforma la luz del sol en electricidad. Es silenciosa, limpia y cada vez más accesible en hogares y empresas.</p>
+    </section>
+
+    <section id="eolica" class="features">
+      <h2>💨 Energía Eólica</h2>
+      <p>Utiliza el viento para mover turbinas que generan electricidad, especialmente útil en zonas con vientos constantes.</p>
+    </section>
+
+    <section id="hidraulica" class="tech">
+      <h2>💧 Energía Hidráulica</h2>
+      <p>Generada por el movimiento del agua en ríos o presas. Es una fuente estable y poderosa de energía renovable.</p>
+    </section>
+
+    <section id="geotermica" class="why">
+      <h2>🌋 Energía Geotérmica</h2>
+      <p>Aprovecha el calor del interior de la Tierra para producir electricidad o calefacción.</p>
+    </section>
+
+    <section id="biomasa" class="features">
+      <h2>🌱 Biomasa</h2>
+      <p>Proviene de materiales orgánicos como madera, residuos agrícolas y estiércol. Es útil para calefacción y producción de biocombustibles.</p>
+    </section>
+
+    <!-- Encuesta -->
+    <section class="encuesta">
+      <h2>💡 Calcula tu consumo energético</h2>
+      <form>
+        <label for="kwh">¿Cuántos kWh consumes al mes?</label>
+        <input type="number" id="kwh" name="kwh" placeholder="Ej. 250" required>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="resultado">*El resultado se mostraría aquí si se permite JavaScript.</div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Eco Pacific | Energía solar que transforma el mañana.</p>
+    <p>&copy; 2025 Eco Pacific | Energía renovable que transforma el mañana.</p>
   </footer>
 </body>
 </html>
