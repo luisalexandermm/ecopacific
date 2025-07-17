@@ -1,4 +1,4 @@
-¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Encabezado con logo y descripción -->
+  <!-- Encabezado -->
   <header>
     <div class="header-content">
       <img src="img/logoeco.pg-removebg-preview.png" alt="Logo Eco Pacific" class="logo" />
@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <!-- Primer navbar: Tipos de energía renovable -->
+    <!-- Navbar: Tipos de energía -->
     <nav class="navbar">
       <ul>
         <li>
@@ -37,7 +37,7 @@
       </ul>
     </nav>
 
-    <!-- Segundo navbar: Conceptos básicos -->
+    <!-- Navbar: Conceptos básicos -->
     <nav class="navbar">
       <ul>
         <li><a href="#intro">¿Qué es la energía renovable?</a></li>
@@ -48,14 +48,16 @@
     </nav>
   </header>
 
+  <!-- Contenido Principal -->
   <main>
-    <!-- Secciones básicas -->
-    <section id="intro" class="queson">
+
+    <!-- Página de inicio (se oculta al navegar a una subpágina) -->
+    <section id="intro" class="inicio">
       <h2>¿Qué es la energía renovable?</h2>
       <p>Es aquella que se obtiene de fuentes naturales inagotables, como el sol, el viento, el agua o la biomasa. Es limpia, accesible y ayuda a reducir la contaminación ambiental.</p>
     </section>
 
-    <section id="importancia" class="features">
+    <section id="importancia" class="inicio">
       <h2>¿Por qué es importante?</h2>
       <ul>
         <li>Reduce las emisiones de CO₂</li>
@@ -64,44 +66,17 @@
       </ul>
     </section>
 
-    <section id="impacto" class="tech">
+    <section id="impacto" class="inicio">
       <h2>Impacto ambiental</h2>
       <p>A diferencia de las energías fósiles, las renovables no emiten gases contaminantes ni residuos peligrosos, ayudando a conservar el medio ambiente.</p>
     </section>
 
-    <section id="usos" class="why">
+    <section id="usos" class="inicio">
       <h2>Usos comunes</h2>
       <p>Se usan en hogares, industrias, transporte y sistemas agrícolas. Los paneles solares, turbinas eólicas y plantas hidroeléctricas son ejemplos comunes.</p>
     </section>
 
-    <!-- Secciones de tipos de energía -->
-    <section id="solar" class="queson">
-      <h2>☀ Energía Solar</h2>
-      <p>Transforma la luz del sol en electricidad. Es silenciosa, limpia y cada vez más accesible en hogares y empresas.</p>
-    </section>
-
-    <section id="eolica" class="features">
-      <h2>💨 Energía Eólica</h2>
-      <p>Utiliza el viento para mover turbinas que generan electricidad, especialmente útil en zonas con vientos constantes.</p>
-    </section>
-
-    <section id="hidraulica" class="tech">
-      <h2>💧 Energía Hidráulica</h2>
-      <p>Generada por el movimiento del agua en ríos o presas. Es una fuente estable y poderosa de energía renovable.</p>
-    </section>
-
-    <section id="geotermica" class="why">
-      <h2>🌋 Energía Geotérmica</h2>
-      <p>Aprovecha el calor del interior de la Tierra para producir electricidad o calefacción.</p>
-    </section>
-
-    <section id="biomasa" class="features">
-      <h2>🌱 Biomasa</h2>
-      <p>Proviene de materiales orgánicos como madera, residuos agrícolas y estiércol. Es útil para calefacción y producción de biocombustibles.</p>
-    </section>
-
-    <!-- Encuesta -->
-    <section class="encuesta">
+    <section class="encuesta inicio">
       <h2>💡 Calcula tu consumo energético</h2>
       <form>
         <label for="kwh">¿Cuántos kWh consumes al mes?</label>
@@ -110,10 +85,65 @@
       </form>
       <div id="resultado">*El resultado se mostraría aquí si se permite JavaScript.</div>
     </section>
+ <hr class="hrsubsolar">
+ <br><br><br><br>
+    <!-- Subpáginas -->
+    <section id="solar" class="subpagina">
+      <div class="energia-header">
+        <img src="img/logoeco.pg-removebg-preview.png" alt="Ícono solar" class="energia-icono" width="120">
+        <h1>Solar Pacific ☀</h1>
+        </div>
+        <p>energia sostenible y eficiente</p>
+         <body>
+         <header>
+           <section id=" intro-solar" class="que-es-solar">
+           <h2>que es la energia solar</h2>
+           </section>
+         </header>
+      </body>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="eolica" class="subpagina">
+      <div class="energia-header">
+        <img src="img/eolica-icon.png" alt="Ícono eólico" class="energia-icono">
+        <h1>Eólica Pacific 🌬</h1>
+      </div>
+      <p>s</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="hidraulica" class="subpagina">
+      <div class="energia-header">
+        <img src="img/hidraulica-icon.png" alt="Ícono hidráulico" class="energia-icono">
+        <h1>Hidráulica Pacific 💧</h1>
+      </div>
+      <p>Contenido sobre energía hidráulica.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="geotermica" class="subpagina">
+      <div class="energia-header">
+        <img src="img/geotermica-icon.png" alt="Ícono geotérmico" class="energia-icono">
+        <h1>Geotérmica Pacific 🌋</h1>
+      </div>
+      <p>Contenido sobre energía geotérmica.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="biomasa" class="subpagina">
+      <div class="energia-header">
+        <img src="img/biomasa-icon.png" alt="Ícono biomasa" class="energia-icono">
+        <h1>Biomasa Pacific 🌱</h1>
+      </div>
+      <p>Contenido sobre biomasa.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Eco Pacific | Energía renovable que transforma el mañana.</p>
   </footer>
+
 </body>
 </html>

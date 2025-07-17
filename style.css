@@ -1,3 +1,4 @@
+/* ========== RESET & BASE ========== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@ body {
   padding: 0 20px;
 }
 
-/* ========== ENCABEZADO ========== */
+/* ========== HEADER ========== */
 header {
   padding: 25px 0;
   box-shadow: 0 4px 8px rgba(190, 171, 66, 0.644);
@@ -25,9 +26,9 @@ header {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
 }
 
 .logo {
@@ -63,7 +64,6 @@ h1:hover, h3:hover {
   font-weight: bold;
 }
 
-/* ========== HEADER RESPONSIVE ========== */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -77,27 +77,6 @@ h1:hover, h3:hover {
     width: 100px;
   }
 }
-/* ========== ANIMACIÓN PARA <summary> ========== */
-.navbar summary {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 12px 15px;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: inline-block;
-}
-
-.navbar summary:hover {
-  background-color: #81c784;
-  color: #f0f0f0;
-  border-color: #ffffff;
-}
-
 
 /* ========== NAVBAR ========== */
 .navbar {
@@ -118,7 +97,8 @@ h1:hover, h3:hover {
   margin: 0 15px;
 }
 
-.navbar a {
+.navbar a,
+.navbar summary {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -126,15 +106,23 @@ h1:hover, h3:hover {
   border-radius: 10px;
   border: 2px solid transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar summary:hover {
   background-color: #81c784;
   color: #f0f0f0;
   border-color: #ffffff;
 }
 
-/* ========== CONTENIDO PRINCIPAL ========== */
+.subnav {
+  margin-top: 10px;
+}
+
+/* ========== MAIN SECTIONS ========== */
 main {
   max-width: 1000px;
   margin: 30px auto;
@@ -150,9 +138,8 @@ section {
   animation: fadeIn 1s ease-in-out;
 }
 
-.queson,
-.why {
-  background-color: #c8e6c9;
+.queson {
+  background-color: #ffffff;
 }
 
 .features {
@@ -163,47 +150,8 @@ section {
   background-color: #e0f7fa;
 }
 
-.intro {
+.why {
   background-color: #e5f0e5;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .intro {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .intro img {
-    flex: 1;
-    max-width: 50%;
-  }
-
-  .intro div {
-    flex: 2;
-  }
-}
-
-/* ========== SECCIÓN DE ENERGÍAS RENOVABLES ========== */
-.energias-renovables {
-  background-color: #e6f7ee;
-}
-
-.energias-renovables ul {
-  list-style: none;
-  padding: 0;
-}
-
-.energias-renovables li {
-  margin: 10px 0;
-}
-
-.energias-renovables a {
-  text-decoration: none;
-  color: #008b5d;
-  font-weight: bold;
 }
 
 /* ========== ENCUESTA ========== */
@@ -243,15 +191,6 @@ section {
 .encuesta #resultado {
   margin-top: 15px;
   font-weight: bold;
-}
-
-/* ========== IMÁGENES ========== */
-.hero-img, .section-img, .par-img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 12px; 
-  margin: 15px 0;
 }
 
 /* ========== FOOTER ========== */
