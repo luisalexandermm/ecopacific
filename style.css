@@ -246,7 +246,7 @@ section {
 
 .solar {
   background: linear-gradient(135deg, #f8c425, #fdd835);
-  color: #3a3000;
+  color: #3a3000; 
 }
 .energia-header {
   display: flex;
