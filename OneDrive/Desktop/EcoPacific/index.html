@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco Pacific</title>
+  <link rel="icon" type="image/png" href="img/logoeco.pg-removebg-preview.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="header-content">
+      <img src="img/logoeco.pg-removebg-preview.png" alt="Logo Eco Pacific" class="logo" />
+      <div class="header-text">
+        <h1>Eco Pacific ♻</h1>
+        <h3>Soluciones sostenibles con energía renovable para un futuro limpio</h3>
+      </div>
+    </div>
+
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#intro">¿Qué es la energía renovable?</a></li>
+        <li><a href="#importancia">¿Por qué es importante?</a></li>
+        <li><a href="#impacto">Impacto ambiental</a></li>
+        <li><a href="#usos">Usos comunes</a></li>
+      </ul>
+    </nav>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li>
+          <details>
+            <summary>Tipos de energía renovable</summary>
+            <ul>
+              <li><a href="#solar">Energía Solar</a></li>
+              <li><a href="#eolica">Energía Eólica</a></li>
+              <li><a href="#hidraulica">Energía Hidráulica</a></li>
+              <li><a href="#geotermica">Energía Geotérmica</a></li>
+              <li><a href="#biomasa">Biomasa</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav> 
+  </header>
+ 
+  <!-- Contenido Principal -->
+  <main>
+
+    <!-- Secciones Introductorias -->
+    <section id="intro" class="inicio">
+      <h2>¿Qué es la energía renovable?</h2>
+      <p>Es aquella que se obtiene de fuentes naturales inagotables, como el sol, el viento, el agua o la biomasa.</p>
+    </section>
+
+    <section id="importancia" class="inicio">
+      <h2>¿Por qué es importante?</h2>
+      <ul>
+        <li>Reduce las emisiones de CO₂</li>
+        <li>Contribuye a combatir el cambio climático</li>
+        <li>Garantiza una energía sostenible para el futuro</li>
+      </ul>
+    </section>
+
+    <section id="impacto" class="inicio">
+      <h2>Impacto ambiental</h2>
+      <p>A diferencia de las energías fósiles, las renovables no emiten gases contaminantes ni residuos peligrosos.</p>
+    </section>
+
+    <section id="usos" class="inicio">
+      <h2>Usos comunes</h2>
+      <p>Se usan en hogares, industrias, transporte y sistemas agrícolas.</p>
+    </section>
+
+    <section class="encuesta inicio">
+      <h2>💡 Calcula tu consumo energético</h2>
+      <form>
+        <label for="kwh">¿Cuántos kWh consumes al mes?</label>
+        <input type="number" id="kwh" name="kwh" placeholder="Ej. 250" required>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="resultado">*El resultado se mostraría aquí si se permite JavaScript.</div>
+    </section>
+
+    <!-- Subpáginas por tipo de energía -->
+    <section id="solar" class="subpagina solar">
+      <div class="energia-header">
+        <img src="img/Pacific SUN-Picstar.png"alt="Ícono solar" class="energia-icono">
+        <h1>Pacific Sun ☀</h1>
+      </div>
+      <p>La energía solar es una de las más utilizadas hoy en día. Se obtiene a partir de la radiación del sol y puede transformarse en electricidad o calor.</p>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Inagotable y gratuita</li> 
+        <li>Reducción de la factura eléctrica</li>
+        <li>Mantenimiento mínimo</li>
+      </ul>
+      <h3>Aplicaciones</h3>
+      <p>Paneles solares en techos, calentadores de agua solares, sistemas fotovoltaicos rurales y más.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section> 
+    <section id="eolica" class="subpagina eolica">
+      <div class="energia-header">
+        <img src="img/eolica-removebg-preview.png" alt="Ícono eólico" class="energia-icono">
+        <h1>Eólica Pacific 🌬</h1>
+      </div>
+      <p>La energía eólica utiliza la fuerza del viento para generar electricidad mediante aerogeneradores.</p>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>No contamina</li>
+        <li>Alto rendimiento en zonas ventosas</li>
+        <li>Bajo impacto en el uso del suelo</li>
+      </ul>
+      <h3>Aplicaciones</h3>
+      <p>Granjas eólicas, turbinas aisladas en zonas rurales, apoyo a redes eléctricas.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="hidraulica" class="subpagina hidraulica">
+      <div class="energia-header">
+        <img src="img/hidraulica-removebg-preview.png" alt="Ícono hidráulico" class="energia-icono">
+        <h1>Hidráulica Pacific 💧</h1>
+      </div>
+      <p>La energía hidráulica se obtiene aprovechando el movimiento del agua, normalmente a través de presas o caídas naturales.</p>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Alta capacidad de generación</li>
+        <li>Almacenamiento de agua</li>
+        <li>Regulación del flujo hídrico</li>
+      </ul>
+      <h3>Aplicaciones</h3>
+      <p>Centrales hidroeléctricas, turbinas pequeñas en ríos, generación para comunidades rurales.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="geotermica" class="subpagina geotermica">
+      <div class="energia-header">
+        <img src="img/geotermica-removebg-preview.png" alt="Ícono geotérmico" class="energia-icono">
+        <h1>Geotérmica Pacific 🌋</h1>
+      </div>
+      <p>La energía geotérmica se genera a partir del calor interno de la Tierra, aprovechando el vapor y agua caliente del subsuelo.</p>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Generación constante</li>
+        <li>Baja emisión de gases</li>
+        <li>Alto rendimiento energético</li>
+      </ul>
+      <h3>Aplicaciones</h3>
+      <p>Calefacción de hogares, generación eléctrica, procesos industriales.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+
+    <section id="biomasa" class="subpagina biomasa">
+      <div class="energia-header">
+        <img src="img/biomasa-removebg-preview.png" alt="Ícono biomasa" class="energia-icono">
+        <h1>Biomasa Pacific 🌱</h1>
+      </div>
+      <p>La biomasa consiste en materia orgánica como residuos agrícolas, madera o desechos orgánicos que pueden ser transformados en energía.</p>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Reduce residuos</li>
+        <li>Fuente renovable y abundante</li>
+        <li>Generación de empleo rural</li>
+      </ul>
+      <h3>Aplicaciones</h3>
+      <p>Estufas, calderas de biomasa, biogás para generar electricidad o calor.</p>
+      <a href="#">⬅ Volver a inicio</a>
+    </section>
+ 
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eco Pacific | Energía renovable que transforma el mañana.</p>
+  </footer>
+
+</body>
+</html>
