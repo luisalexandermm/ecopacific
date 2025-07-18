@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #121212;
+  padding: 0 20px 40px;
+  line-height: 1.6;
+}
+
+/* ENCABEZADO */
+.energia-header.biomasa {
+  background: #e4f5dc;
+  color: #1e1e1e;
+  padding: 20px 30px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.6s ease;
+}
+
+.energia-icono {
+  width: 60px;
+  height: auto;
+}
+
+.titulo-nav {
+  flex: 1;
+}
+
+.energia-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* NAV */
+.biomasa-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.biomasa-nav a {
+  text-decoration: none;
+  color: #222;
+  background: #c3e9ad;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.biomasa-nav a:hover {
+  background: #aee89c;
+}
+
+/* SECCIONES */
+.subpagina.biomasa section {
+  background: #f8fff5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* IMAGEN */
+.imagen {
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* TEXTO */
+.texto {
+  flex: 2;
+  text-align: justify;
+}
+
+.texto h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #245d1e;
+}
+
+.texto p,
+.texto ul {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.texto ul {
+  padding-left: 20px;
+}
+
+/* BOTÓN VOLVER */
+.volver-inicio a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #aee89c;
+  color: #000;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+
+.volver-inicio a:hover {
+  background-color: #94db87;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
