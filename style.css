@@ -479,9 +479,7 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-
+} 
 .solar {
   background: linear-gradient(135deg, #f8c425, #fdd835);
   color: #3a3000; 
