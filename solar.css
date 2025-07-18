@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+  padding: 0 20px 40px;
+}
+
+/* ========== ENCABEZADO ========== */
+.energia-header.solar {
+  background: #fff8c4;
+  color: #1e1e1e;
+  padding: 20px 30px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.7s ease-in-out;
+}
+
+.energia-icono {
+  width: 60px;
+  height: auto;
+}
+
+.titulo-nav {
+  flex: 1;
+}
+
+.energia-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* NAV INTERNO */
+.solar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.solar-nav a {
+  text-decoration: none;
+  color: #333;
+  background: #ffef9f;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.solar-nav a:hover {
+  background: #ffe94d;
+  color: #000;
+}
+
+/* ========== SECCIONES ========== */
+main.subpagina.solar section {
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  margin-top: 30px;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+main p, main li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+strong {
+  color: #d68900;
+}
+
+/* IMÁGENES */
+.imagen {
+  width: 50%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin: 15px 0;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* BOTÓN DE VOLVER */
+.volver-inicio a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffe94d;
+  color: #000;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+
+.volver-inicio a:hover {
+  background-color: #ffde22;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ANIMACIONES */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
