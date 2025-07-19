@@ -1,0 +1,180 @@
+/* hidraulica.css - Estilos personalizados para hidráulik.html */
+
+/* Fondo general y fuente */
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #e0f7fa;
+    color: #006064;
+    padding: 20px 30px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.7s ease-in-out;
+}
+.energia-icono {
+    width: 60px;
+    height: auto;
+}
+.titulo-nav {
+    flex-grow: 1;
+}
+
+/* Navegación interna */
+.hidraulica-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hidraulica-nav a {
+  text-decoration: none;
+  color: #333;
+  background: #b2ebf2;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hidraulica-nav a:hover {
+  background: #4d6eff;
+  color: #f5f1f1;
+  text-transform: uppercase;
+}
+
+/* Secciones */
+section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin: 24px auto;
+    max-width: 900px;
+    padding: 32px;
+}
+
+/* Botones */
+button, .btn {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover, .btn:hover {
+    background-color: #00838f;
+}
+
+/* Enlaces */
+a {
+    color: #0097a7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #006064;
+    text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+    padding-left: 24px;
+    margin-bottom: 16px;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 16px;
+}
+
+.imagen {
+    margin: 16px auto;
+    display: block;
+    width: 300px;
+    height: 100%;
+}
+.imagen:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+/* Descripciones */
+.descripcion,
+.ventajas,
+.desventajas,
+.avances,
+.aplicaciones {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 12px;
+}
+
+/* Pie de página */
+footer {
+    background: #0097a7;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 48px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.volver-inicio {
+    border: #006064 2px solid;
+    margin: 16px;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #004d40;
+    transition: color 0.2s;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*subtítulos */
+.subtitulos {
+    color: #004d40;
+    font-size: 1.5rem;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #b2ebf2;
+    padding-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    section {
+        padding: 16px;
+        margin: 12px;
+    }
+    header, h1 {
+        font-size: 1.5rem;
+        padding: 16px 0;
+    }
+}
