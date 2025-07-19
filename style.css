@@ -81,7 +81,7 @@ h1:hover, h3:hover {
 /* ========== NAVBAR ========== */
 .navbar {
   margin-top: 20px;
-  background: linear-gradient(135deg, #13991a 0%, #bbe2bc 25%, #fff7d7 50%, #daf8fc 75%, #eef0ee 100%);
+  background: linear-gradient(135deg,  #dcf7dc 0%, #e3fcff 50%, #fff7d7 100%);
   padding: 10px 0; color: #000;
   border-radius: 10px;
   border: 2px solid #e5f0e5;
@@ -559,7 +559,7 @@ footer {
 
 .hidraulica {
   background: linear-gradient(135deg, #f7fcff, #fcfcfc);
-  color: #ffffff;
+  color: #111111;
 }
 
 .geotermica {
@@ -570,6 +570,22 @@ footer {
 .biomasa {
   background: linear-gradient(135deg, #f9fff9, #ffffff);
   color: #0a0a0a;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+.social-icons img:hover {
+  transform: scale(2);
 }
 
 /* === Animaciones === */
