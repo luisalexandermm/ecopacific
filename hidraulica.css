@@ -145,7 +145,7 @@ footer {
     transition: color 0.2s;
     bottom: 20px;
     left: 20px;
-    position: fixed;
+    position:sticky;
 }
 
 /* Animaciones */
