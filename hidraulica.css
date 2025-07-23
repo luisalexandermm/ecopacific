@@ -143,6 +143,9 @@ footer {
     font-size: 1.2rem;
     color: #004d40;
     transition: color 0.2s;
+    bottom: 20px;
+    left: 20px;
+    position: fixed;
 }
 
 /* Animaciones */
