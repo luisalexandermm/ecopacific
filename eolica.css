@@ -72,9 +72,16 @@ header {
 }
 
 .navbar a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #cdebf3;
+  color: #000;
+  border-radius: 12px;
   text-decoration: none;
-  color: #0077aa;
   font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s;
   bottom: 20px;
   left: 20px;
   position:sticky;
