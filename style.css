@@ -42,7 +42,7 @@ header {
   width: 100%;
 }
 
-header h1, header h3 {
+header h1, header h3 h2 {
   color: #1b2b1b;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
@@ -54,7 +54,7 @@ header h1 {
   font-weight: bold;
 }
 
-header h3 {
+header h3 h2 {
   font-size: 1.2em;
   font-weight: normal;
 }
