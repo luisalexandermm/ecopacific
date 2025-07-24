@@ -83,12 +83,13 @@ h1:hover, h3:hover h2:hover {
 }
  /*seccion de los graficos*/
  .subpagina-graficos{
+  background-color: linear-gradient(135deg, #3db143a4 0%, #c8e6c9 25%, #fff9e0 50%, #e0f7fa 75%, #eef0ee 100%);
    margin: 50px 20px;
    padding: 20px;
    border-radius: 20px;
    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-   color: #fff;
-   animation: fadeInUp 1.2s ease;
+ 
+   
    
  }
 /* ========== NAVBAR ========== */
