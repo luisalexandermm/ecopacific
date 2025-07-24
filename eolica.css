@@ -58,7 +58,7 @@ header {
 /* Barra de navegación */
 .navbar {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .navbar ul {
@@ -75,6 +75,9 @@ header {
   text-decoration: none;
   color: #0077aa;
   font-weight: bold;
+  bottom: 20px;
+  left: 20px;
+  position:sticky;
 }
 
 .navbar a:hover {
