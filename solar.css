@@ -108,25 +108,91 @@ strong {
   color: #d68900;
 }
 
-/* BOTÓN DE VOLVER */
-.volver-inicio a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ffe94d;
-  color: #000;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background 0.3s;
-  bottom: 20px;
-  left: 20px;
-  position:sticky;
+/* ========== GALERÍA SOLAR ========== */
+.galeria-solar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-.volver-inicio a:hover {
+.galeria-solar img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria-solar img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== TESTIMONIOS ========== */
+#testimonios blockquote {
+  background-color: #fff5c2;
+  padding: 15px 20px;
+  border-left: 6px solid #e0a800;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+#testimonios cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* ========== BOTÓN WHATSAPP ========== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ========== BOTÓN VOLVER A ECO PACIFIC FLOTANTE ========== */
+.volver-inicio {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 999;
+  background-color: #ffe94d;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.volver-inicio:hover {
   background-color: #ffde22;
+  transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -176,5 +242,10 @@ footer {
   main section p,
   main section ul {
     width: 100%;
+  }
+
+  .galeria-solar img {
+    width: 90%;
+    height: auto;
   }
 }
