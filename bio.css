@@ -22,7 +22,7 @@ body {
   align-items: center;
   gap: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: cambio-color 10s
+  animation: cambio-color 10s infinite alternate;
 }
 
 .energia-icono {
@@ -82,30 +82,30 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* TEXTO */
-.texto {
+/* TEXTO EN SECCIONES */
+.subpagina.biomasa section div {
   flex: 2;
   text-align: justify;
 }
 
-.texto h2 {
+.subpagina.biomasa section h2 {
   font-size: 1.5rem;
   margin-bottom: 12px;
   color: #245d1e;
 }
 
-.texto p,
-.texto ul {
+.subpagina.biomasa section p,
+.subpagina.biomasa section ul {
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
-.texto ul {
+.subpagina.biomasa section ul {
   padding-left: 20px;
 }
 
 /* BOTÓN VOLVER */
-.volver-inicio a {
+.volver-inicio {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
@@ -118,8 +118,28 @@ body {
   transition: background 0.3s;
 }
 
-.volver-inicio a:hover {
+.volver-inicio:hover {
   background-color: #94db87;
+} 
+/* BOTÓN VOLVER - FLOTANTE */
+.volver-inicio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #aee89c;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.volver-inicio:hover {
+  background-color: #94db87;
+  transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -130,7 +150,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ANIMACIÓN */
+/* ANIMACIONES */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -139,5 +159,17 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes cambio-color {
+  0% {
+    background-color: #e4f5dc;
+  }
+  50% {
+    background-color: #d4f2c1;
+  }
+  100% {
+    background-color: #c3e9ad;
   }
 }
