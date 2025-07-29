@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
       resultadoDiv.textContent = 'Por favor ingresa un valor válido.';
     }
   });
-});
+}); 
