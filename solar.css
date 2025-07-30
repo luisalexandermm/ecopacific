@@ -130,22 +130,6 @@ strong {
   transform: scale(1.05);
 }
 
-/* ========== TESTIMONIOS ========== */
-#testimonios blockquote {
-  background-color: #fff5c2;
-  padding: 15px 20px;
-  border-left: 6px solid #e0a800;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  font-style: italic;
-}
-
-#testimonios cite {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #555;
-}
 
 /* ========== BOTÓN WHATSAPP ========== */
 .whatsapp-float {
