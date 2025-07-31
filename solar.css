@@ -59,10 +59,38 @@ body {
 
 .solar-nav a:hover {
   background: #ffe94d;
-  color: #000;
+  color: #ffef9f;
+}
+ 
+/* ========== SECCIONES ========== */
+#impacto {
+  text-align: center;
+  margin: 40px 0;
 }
 
-/* ========== SECCIONES ========== */
+#impacto .impacto-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.impacto-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.impacto-card:hover {
+  transform: translateY(-5px);
+}
+
+.impacto-card h3 {
+  color: #f7b733;
+  margin-bottom: 10px;
+}
 main.subpagina.solar section {
   background-color: #f9f9f9;
   padding: 20px;
