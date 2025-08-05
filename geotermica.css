@@ -1,0 +1,192 @@
+/* Fuente base y estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf8;
+  color: #4d3b2f;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #ffe4c4;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.titulo-nav {
+  margin: 10px 0 0 0;
+  font-size: 2.5rem;
+  color: #d1884f;
+}
+
+.energia-icono {
+  width: 60px;
+  vertical-align: middle;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Barra de navegación principal */
+.geotermica-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #fffaf0, #ffe0b2, #fffaf0);
+  padding: 15px 25px;
+  margin: 15px auto;
+  border-radius: 25px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+/* Enlaces del menú */
+.geotermica-nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #8a4b1e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+/* Línea decorativa animada */
+.geotermica-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e07b39;
+  border-radius: 15px;
+  transition: width 0.3s ease;
+}
+
+.geotermica-nav a:hover::after {
+  width: 100%;
+}
+
+.geotermica-nav a:hover {
+  color: #d1884f;
+  background-color: #fff0da;
+  transform: scale(1.05);
+}
+
+/* Responsive navegación */
+@media screen and (max-width: 768px) {
+  .geotermica-nav {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .geotermica-nav a {
+    margin: 10px 0;
+  }
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.subtitulos {
+  font-size: 1.8rem;
+  color: #b86129;
+  margin-bottom: 15px;
+}
+
+/* Texto */
+.descripcion, .avances {
+  font-size: 1.1rem;
+}
+
+/* Listas */
+.ventajas, .aplicaciones, .desventajas {
+  list-style-type: square;
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+
+/* Imágenes */
+.imagen {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.imagen:hover {
+  transform: scale(1.03);
+}
+
+/* Botón flotante */
+.boton-volver {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffd4a3;
+  color: #4d3b2f;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.boton-volver:hover {
+  background-color: #f2b675;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #ffe4c4;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #4d3b2f;
+  margin-top: 40px;
+  border-top: 2px solid #f2c99e;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive ajustes finales */
+@media screen and (max-width: 768px) {
+  .titulo-nav {
+    font-size: 2rem;
+  }
+
+  .imagen {
+    width: 100%;
+  }
+}

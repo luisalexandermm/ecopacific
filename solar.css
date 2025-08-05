@@ -21,7 +21,7 @@ body {
   gap: 15px;
   border-radius: 15px;
   padding: 15px 0;
-  background: linear-gradient(to right, #ffffec, #f8f3b0); /* Colores solares */
+  background: linear-gradient(to right, #ffffec, #f8f3b0);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -29,22 +29,27 @@ body {
 }
 
 .solar-nav a {
-  color: white;
+  color: #333;
   font-weight: 600;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 25px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-family: 'Raleway', sans-serif;
+  background: #ffef9f;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .solar-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffe94d;
+  color: #fff8c4;
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 233, 77, 0.6);
 }
+
 /* ================== ENCABEZADO ================== */
 .energia-header.solar {
-  background: #fff8c4;
+  background: linear-gradient(to right, #ffffec, #f8f3b0);
   color: #1e1e1e;
   padding: 20px 30px;
   border-radius: 0 0 20px 20px;
@@ -54,7 +59,12 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: fadeInDown 0.7s ease-in-out;
 }
-
+.slogan {
+  font-size: 1.2rem;
+  color: #d68900;
+  font-weight: bold;
+  margin-left: 10px;
+}
 .energia-icono {
   width: 60px;
   height: auto;
@@ -69,36 +79,12 @@ body {
   margin-bottom: 8px;
 }
 
-/* ===== NAV INTERNO ===== */
-.solar-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.solar-nav a {
-  text-decoration: none;
-  color: #333;
-  background: #ffef9f;
-  padding: 8px 14px;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.solar-nav a:hover {
-  background: #ffe94d;
-  color: #fff8c4;
-  box-shadow: 0 0 15px rgba(255, 233, 77, 0.6);
-}
-
 /* ================== SECCIONES GENERALES ================== */
 main.subpagina.solar section {
   background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 25px;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   display: flex;
   flex-wrap: wrap;
@@ -108,8 +94,8 @@ main.subpagina.solar section {
 }
 
 main section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
   color: #e0a800;
   width: 100%;
 }
@@ -312,5 +298,27 @@ a, button, img {
   .galeria-solar img {
     width: 90%;
     height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .solar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .solar-nav a {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .energia-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .volver-inicio {
+    left: 10px;
+    bottom: 10px;
+    font-size: 0.85rem;
   }
 }

@@ -16,7 +16,7 @@ body {
 /* ========== HEADER ========== */
 header {
   padding: 25px 0;
-  box-shadow: 0 4px 8px rgba(190, 171, 66, 0.644);
+  box-shadow: 0 4px 8px rgba(252, 206, 137, 0.644);
   border-radius: 10px;
   background: linear-gradient(135deg, #3db143a4 0%, #c8e6c9 25%, #fff9e0 50%, #e0f7fa 75%, #eef0ee 100%);
 }
