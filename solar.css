@@ -61,6 +61,7 @@ body {
 .solar-nav a:hover {
   background: #ffe94d;
   color: #fff8c4;
+  box-shadow: 0 0 15px rgba(255, 233, 77, 0.6);
 }
 
 /* ================== SECCIONES GENERALES ================== */
@@ -132,6 +133,7 @@ strong {
 
 .impacto-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 233, 77, 0.4);
 }
 
 .impacto-card h3 {
@@ -159,6 +161,7 @@ strong {
 
 .galeria-solar img:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 233, 77, 0.5);
 }
 
 /* ================== BOTÓN WHATSAPP ================== */
@@ -185,6 +188,7 @@ strong {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
 }
 
 /* ================== BOTÓN VOLVER A ECO PACIFIC ================== */
@@ -207,6 +211,7 @@ strong {
 .volver-inicio:hover {
   background-color: #ffde22;
   transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 233, 77, 0.5);
 }
 
 /* ================== FOOTER ================== */
@@ -240,6 +245,23 @@ footer {
   }
 }
 
+/* ================== ANIMACIONES SCROLL ================== */
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================== TRANSICIONES GLOBALES ================== */
+a, button, img {
+  transition: all 0.3s ease-in-out;
+}
+
 /* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
   main.subpagina.solar section {
@@ -262,4 +284,4 @@ footer {
     width: 90%;
     height: auto;
   }
-  }
+}
