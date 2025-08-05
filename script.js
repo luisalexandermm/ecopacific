@@ -24,3 +24,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 }); 
+ document.addEventListener('DOMContentLoaded', () => {
+   // Datos de ejemplo para el gráfico
+   const datosConsumo = {
+     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+     datasets: [{
+       label: 'Consumo Energético (kWh)',
+       data: [120, 150, 180, 200, 170, 160],
+       backgroundColor: 'rgba(75, 192, 192, 0.2)',
+       borderColor: 'rgba(75, 192, 192, 1)',
+       borderWidth: 1
+     }]
+   };
+
+   // Configuración del gráfico
+   const config = {
+     type: 'bar',
+     data: datosConsumo,
+     options: {
+       scales: {
+         y: {
+           beginAtZero: true
+         }
+       }
+     }
+   };
+
+   // Renderizar el gráfico en el contenedor
+   const ctx = document.getElementById('grafico-consumo').getContext('2d');
+   new Chart(ctx, config);
+ });
