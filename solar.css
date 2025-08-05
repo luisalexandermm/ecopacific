@@ -13,6 +13,35 @@ body {
   padding: 0 20px 40px;
 }
 
+/* NAVEGACIÓN PRINCIPAL */
+.solar-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-radius: 15px;
+  padding: 15px 0;
+  background: linear-gradient(to right, #ffffec, #f8f3b0); /* Colores solares */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.solar-nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+}
+
+.solar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
 /* ================== ENCABEZADO ================== */
 .energia-header.solar {
   background: #fff8c4;
