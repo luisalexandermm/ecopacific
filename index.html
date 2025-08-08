@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eco Pacific</title>
-  <link rel="icon" type="image/png" href="img/logoeco.png" />
+  <link rel="icon" href="img/logoeco.png" />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <!-- Encabezado -->
@@ -26,6 +27,7 @@
         <li><a href="#impacto">Impacto ambiental</a></li>
         <li><a href="#beneficios">Beneficios sociales</a></li>
         <li><a href="#usos">Usos comunes</a></li>
+        <li><a href="#datos-historicos">Datos Históricos</a></li>
       </ul>
     </nav>
 
@@ -112,15 +114,28 @@
       </form>
       <div id="resultado">*El resultado se mostrará aquí.</div>
     </section>
-     <section id="dasboard"> 
-        <div class="dashboard inicio">
-        <h2>📊 Estadísticas de consumo energético</h2>
-        <div id="grafico-consumo">
-          <!-- Aquí se insertará el gráfico dinámicamente -->
-        </div>
 
-       </div>
-     </section>
+    <!-- Datos Históricos -->
+    <section id="datos-historicos" class="inicio">
+      <h2>📊 Datos Históricos de Consumo Energético</h2>
+      <p>Visualiza la evolución del consumo de energías renovables desde 1965 hasta 2022.</p>
+
+      <p>Los datos se basan en estadísticas oficiales y estudios de mercado.</p>
+      <p>El gráfico y la tabla a continuación muestran el consumo de energías renovables
+
+      <!-- Gráfico -->
+      <div class="grafico-container">
+        <canvas id="consumoChart"></canvas>
+      </div>
+
+      <!-- Tabla -->
+      <div class="tabla-container">
+        <table id="dataTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
   <!-- Pie de página -->

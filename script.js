@@ -3,16 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /** ==============================
    *  ANÁLISIS DE CONSUMO DEL FORMULARIO
-   *  ==============================
-   *  Este bloque gestiona la interacción del formulario que permite
-   *  al usuario ingresar su consumo mensual en kWh y le muestra un
-   *  mensaje personalizado según su nivel de consumo.
-   */
+   *  ============================== */
   const formulario = document.getElementById('formulario');
   const resultadoDiv = document.getElementById('resultado');
 
   formulario.addEventListener('submit', (e) => {
-    e.preventDefault(); // Previene el envío tradicional del formulario
+    e.preventDefault();
 
     const kwh = document.getElementById('kwh').value.trim();
 
@@ -20,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const consumo = parseFloat(kwh);
       let mensaje = '';
 
-      // Evaluamos el nivel de consumo e indicamos un mensaje
       if (consumo <= 100) {
         mensaje = 'Tu consumo es bajo. ¡Excelente! 🌱';
       } else if (consumo <= 300) {
@@ -29,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mensaje = 'Tu consumo es alto. Considera opciones renovables 🌍';
       }
 
-      // Mostramos el mensaje con efecto de animación (opcional)
       resultadoDiv.textContent = `Consumo mensual: ${consumo} kWh. ${mensaje}`;
       resultadoDiv.style.opacity = 0;
       setTimeout(() => {
@@ -41,62 +35,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
   /** ==============================
-   *  GRÁFICO DE BARRAS CON CHART.JS
-   *  ==============================
-   *  Este bloque genera un gráfico de barras que muestra el consumo
-   *  energético en kWh a lo largo de varios meses como ejemplo.
-   */
-  const datosConsumo = {
-    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-    datasets: [{
-      label: 'Consumo Energético (kWh)',
-      data: [120, 150, 180, 200, 170, 160],
-      backgroundColor: [
-        'rgba(255, 206, 86, 0.6)',
-        'rgba(75, 192, 192, 0.6)',
-        'rgba(255, 99, 132, 0.6)',
-        'rgba(153, 102, 255, 0.6)',
-        'rgba(54, 162, 235, 0.6)',
-        'rgba(255, 159, 64, 0.6)'
-      ],
-      borderColor: 'rgba(0, 0, 0, 0.1)',
-      borderWidth: 1
-    }]
-  };
+   *  DATOS HISTÓRICOS DE ENERGÍA RENOVABLE
+   *  ============================== */
+  const datosHistoricos = [
+    ["Año", "Consumo (TWh)"],
+    ["1965", 120], ["1970", 150], ["1975", 180], ["1980", 210],
+    ["1985", 260], ["1990", 320], ["1995", 400], ["2000", 520],
+    ["2005", 700], ["2010", 950], ["2015", 1500], ["2016", 1650],
+    ["2017", 1820], ["2018", 2000], ["2019", 2150], ["2020", 2300],
+    ["2021", 2500], ["2022", 2700]
+  ];
 
-  const config = {
-    type: 'bar',
-    data: datosConsumo,
+  // Mostrar datos en tabla
+  const thead = document.querySelector("#dataTable thead");
+  const tbody = document.querySelector("#dataTable tbody");
+
+  thead.innerHTML = "<tr>" + datosHistoricos[0].map(h => `<th>${h}</th>`).join("") + "</tr>";
+  tbody.innerHTML = datosHistoricos.slice(1).map(fila =>
+    "<tr>" + fila.map(celda => `<td>${celda}</td>`).join("") + "</tr>"
+  ).join("");
+
+  // Crear gráfico con Chart.js
+  const años = datosHistoricos.slice(1).map(f => f[0]);
+  const valores = datosHistoricos.slice(1).map(f => f[1]);
+
+  const ctx = document.getElementById('consumoChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: años,
+      datasets: [{
+        label: 'Consumo de Energía Renovable (TWh)',
+        data: valores,
+        borderColor: '#00b4d8',
+        backgroundColor: 'rgba(0, 180, 216, 0.2)',
+        borderWidth: 2,
+        fill: true,
+        tension: 0.3,
+        pointBackgroundColor: '#3a0ca3'
+      }]
+    },
     options: {
       responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'kWh'
-          }
-        }
+      animation: {
+        duration: 1500,
+        easing: 'easeInOutQuart'
       },
       plugins: {
         legend: {
-          display: true,
-          position: 'top'
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return `${context.parsed.y} kWh`;
-            }
+          labels: {
+            color: '#333',
+            font: { size: 14 }
           }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#333' },
+          grid: { color: '#ddd' }
+        },
+        y: {
+          ticks: { color: '#333' },
+          grid: { color: '#ddd' }
         }
       }
     }
-  };
-
-  const ctx = document.getElementById('grafico-consumo').getContext('2d');
-  new Chart(ctx, config);
+  });
 
 });
