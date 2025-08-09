@@ -317,3 +317,36 @@ section h2 {
 section p {
   font-size: 1.1rem; /* Aplica a párrafos dentro de secciones */
 }
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9rem;
+  background-color: #83d6f7;
+  padding: 10px 0;
+}
+.volver-inicio {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 999;
+  background-color: #d5f8fd;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(217, 250, 248, 0.685);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+.volver-inicio:hover {
+  background-color: #83d6f7;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(245, 245, 244, 0.5);
+}
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
