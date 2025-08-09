@@ -304,3 +304,16 @@ section img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+/* Texto más grande en las secciones */
+section {
+  font-size: 1.1rem; /* Aumenta el tamaño del texto */
+}
+
+/* Y si quieres que los títulos dentro de las secciones también crezcan */
+section h2 {
+  font-size: 1rem; /* Más grande que el original */
+}
+
+section p {
+  font-size: 1.1rem; /* Aplica a párrafos dentro de secciones */
+}
