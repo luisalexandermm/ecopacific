@@ -19,36 +19,79 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     animation: fadeInDown 0.7s ease-in-out;
 }
+/* Encabezado centrado */
+header.energia-header.hidraulica {
+    background: #e0f7fa;
+    color: #006064;
+    padding: 20px 30px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column; /* Apila imagen y texto */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.7s ease-in-out;
+}
+
 .energia-icono {
-    width: 60px;
+    width: 100px; /* Un poco más grande para equilibrio visual */
     height: auto;
+}
+
+.titulo-principal h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #006064;
+}
+
+.titulo-principal .slogan {
+    margin: 4px 0 0 0;
+    font-size: 1.1rem;
+    color: #004d40;
+    font-style: italic;
+}
+.energia-icono {
+    width: 80px;
+    height: auto;
+    align-self: center;
 }
 .titulo-nav {
     flex-grow: 1;
 }
 
 /* Navegación interna */
+/* Navegación interna mejorada */
 .hidraulica-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    justify-content: center;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #ffffff, #b2ebf2); /* Fondo más suave */
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .hidraulica-nav a {
     text-decoration: none;
-    color: #333;
-    background: #b2ebf2;
-    padding: 8px 14px;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #050505;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
 .hidraulica-nav a:hover {
-    background: #4d6eff;
-    color: #f5f1f1;
-    text-transform: uppercase;
+    background: #ffffff;
+    color: #000000;
+    transform: scale(1.03); /* Escala más pequeña */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
 }
 
 /* Secciones */
