@@ -19,7 +19,7 @@ body {
   background: #d1f1c2;
   color: #1e1e1e;
   padding: 20px 30px;
-  border-radius: 0 0 20px 20px;
+  border-radius: 10px  10px 20px 20px;
   display: flex;
   align-items: center;
   gap: 20px;
