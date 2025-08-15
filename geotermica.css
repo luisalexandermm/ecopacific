@@ -1,4 +1,4 @@
-/* Fuente base y estilo general */
+* Fuente base y estilo general */
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@ body {
   background-color: #fffdf8;
   color: #4d3b2f;
   line-height: 1.6;
-  padding-top: 140px; /* Altura total header + nav */
+  padding-top: 0; /* Ya no reservamos espacio extra para header+nav flotante */
 }
 
 /* Encabezado */
@@ -29,7 +29,7 @@ header {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Barra de navegación principal (flotante hacia abajo con límite superior) */
+/* Barra de navegación principal (estática) */
 .geotermica-nav {
   display: flex;
   justify-content: center;
@@ -40,9 +40,7 @@ header {
   width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   animation: fadeIn 1.2s ease-in-out;
-  position: sticky;       /* Fija pero con límite */
-  top: 100px;              /* Justo debajo del header */
-  z-index: 10;
+  /* Eliminado sticky y top */
 }
 
 /* Enlaces del menú */
