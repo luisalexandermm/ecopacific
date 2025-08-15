@@ -35,7 +35,7 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   background: linear-gradient(to right, #fffaf0, #ffe0b2, #fffaf0);
-  padding: 15px 25px;
+  padding: 25px;
   border-radius: 0 0 25px 25px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
