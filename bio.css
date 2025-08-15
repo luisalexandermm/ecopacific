@@ -83,7 +83,7 @@ body {
 }
 
 .volver-inicio:hover {
-  background-color: #94db87;
+  background-color: linear-gradient(45deg, #aee89c, #ffffff);
   transform: scale(1.05);
 }
 
