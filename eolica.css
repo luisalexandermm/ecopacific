@@ -13,6 +13,7 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 10px;
+  padding-top: 180px; /* Altura total del header + navbar */
 }
 
 /* Encabezado */
@@ -60,18 +61,31 @@ header {
   margin-top: 5px;
 }
 
-/* Barra de navegación */
+/* Navbar en estado normal */
 .navbar {
-  margin: 20px 0;
+  position: relative; /* empieza en flujo normal */
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
   padding: 10px 0;
   text-align: center;
-  border-top: 2px solid #cdebf3;
   border-bottom: 2px solid #cdebf3;
   background-color: #e6f6fb;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+  transition: all 0.3s ease;
 }
 
+/* Estado fijo (cuando se vuelve flotante) */
+.navbar.fixed {
+  position: fixed;
+  top: 0; /* pegada arriba */
+  left: 0;
+}
+
+/* Lista y enlaces */
 .navbar ul {
   list-style: none;
   padding: 0;
@@ -98,7 +112,6 @@ header {
   color: #003344;
   transform: scale(1.05);
 }
-
 /* Contenido principal */
 main {
   display: flex;
@@ -114,6 +127,7 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 50, 0.05);
   animation: fadeIn 1.2s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
 }
 
 section:hover {
@@ -122,39 +136,20 @@ section:hover {
 }
 
 /* Estilos por sección */
-.historia {
-  background: linear-gradient(135deg, #eaf9ff, #d1f0fa);
-}
-
-.impacto {
-  background: linear-gradient(135deg, #dcf5f9, #c2edf0);
-}
-
-.casos {
-  background: linear-gradient(135deg, #d7f0fd, #bae4fa);
-}
-
-.tecnologia {
-  background: linear-gradient(135deg, #e8faff, #b2ebf2);
-}
-
-.beneficios {
-  background: linear-gradient(135deg, #d3f5fc, #a3e4f9);
-}
-
-.retos {
-  background: linear-gradient(135deg, #e0f9ff, #c2e7f7);
-}
-
-.futuro {
-  background: linear-gradient(135deg, #d0f4ff, #b0e6f7);
-}
+.historia { background: linear-gradient(135deg, #eaf9ff, #d1f0fa); }
+.impacto { background: linear-gradient(135deg, #dcf5f9, #c2edf0); }
+.casos { background: linear-gradient(135deg, #d7f0fd, #bae4fa); }
+.tecnologia { background: linear-gradient(135deg, #e8faff, #b2ebf2); }
+.beneficios { background: linear-gradient(135deg, #d3f5fc, #a3e4f9); }
+.retos { background: linear-gradient(135deg, #e0f9ff, #c2e7f7); }
+.futuro { background: linear-gradient(135deg, #d0f4ff, #b0e6f7); }
 
 /* Títulos */
 h2 {
   color: #0077aa;
   margin-bottom: 10px;
   position: relative;
+  font-size: 1rem;
 }
 
 h2::after {
@@ -179,13 +174,13 @@ li {
 
 /* Footer */
 footer {
-  background-color: #0077aa;
-  color: white;
+  background-color: #83d6f7;
+  color: #666;
   text-align: center;
-  padding: 18px 20px;
+  padding: 10px 0;
   border-radius: 12px;
   margin-top: 40px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -200,44 +195,24 @@ footer {
   to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 0 10px rgba(58, 12, 163, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(58, 12, 163, 0.6); }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo {
-    width: 70px;
-  }
-
-  .header-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .header-text h3 {
-    font-size: 1rem;
-  }
-
-  .navbar li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main {
-    gap: 20px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  footer {
-    font-size: 0.85rem;
-    padding: 14px;
-  }
+  .header-content { flex-direction: column; align-items: flex-start; }
+  .logo { width: 70px; }
+  .header-text h1 { font-size: 1.8rem; }
+  .header-text h3 { font-size: 1rem; }
+  .navbar li { display: block; margin: 10px 0; }
+  main { gap: 20px; }
+  section { padding: 20px; }
+  footer { font-size: 0.85rem; padding: 14px; }
 }
-/* Botón flotante "Volver a Eco Pacific" (versión reducida) */
+
+/* Botón flotante "Volver a Eco Pacific" */
 .boton-flotante {
   position: fixed;
   bottom: 20px;
@@ -260,14 +235,6 @@ footer {
   background: linear-gradient(135deg, #3a0ca3, #00b4d8);
 }
 
-@keyframes pulsar {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(58, 12, 163, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(58, 12, 163, 0.6);
-  }
-}
 /* Imágenes en secciones */
 section img {
   width: 100%;
@@ -304,27 +271,8 @@ section img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
-/* Texto más grande en las secciones */
-section {
-  font-size: 1.1rem; /* Aumenta el tamaño del texto */
-}
 
-/* Y si quieres que los títulos dentro de las secciones también crezcan */
-section h2 {
-  font-size: 1rem; /* Más grande que el original */
-}
-
-section p {
-  font-size: 1.1rem; /* Aplica a párrafos dentro de secciones */
-}
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #666;
-  font-size: 0.9rem;
-  background-color: #83d6f7;
-  padding: 10px 0;
-}
+/* Botón volver al inicio */
 .volver-inicio {
   position: fixed;
   bottom: 25px;
@@ -340,11 +288,14 @@ footer {
   transition: all 0.3s ease;
   font-size: 0.95rem;
 }
+
 .volver-inicio:hover {
   background-color: #83d6f7;
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(245, 245, 244, 0.5);
 }
+
+/* Animación de aparición al hacer scroll */
 .scroll-anim {
   opacity: 0;
   transform: translateY(40px);
