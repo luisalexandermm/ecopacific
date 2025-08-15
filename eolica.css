@@ -1,4 +1,4 @@
-/* Reset y base */
+/* ==================== RESET Y BASE ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,29 +6,23 @@
   scroll-behavior: smooth;
 }
 
-/* Fuente global */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f9ff;
+  background-color: #d4eeff;
   color: #333;
   line-height: 1.6;
-  padding: 10px;
-  padding-top: 180px; /* Altura total del header + navbar */
+  padding: 10px; /* solo padding general */
+  padding-top: 0; /* eliminado para que no haya espacio arriba */
 }
 
-/* Encabezado */
 header {
-  background: linear-gradient(90deg, #c1e1ec, #89cff0);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  animation: colorChange 10s infinite alternate;
-  box-shadow: 0 4px 12px rgba(0, 102, 153, 0.2);
+  margin-bottom: 20px; /* deja separación solo debajo del header */
 }
 
-@keyframes colorChange {
-  0% { background-color: #c1e1ec; }
-  100% { background-color: #b3d7f0; }
+@keyframes gradientChange {
+  0% { background: linear-gradient(90deg, #c1e1ec, #89cff0); }
+  50% { background: linear-gradient(90deg, #b3d7f0, #7fc0e8); }
+  100% { background: linear-gradient(90deg, #a0cce8, #6fb8e0); }
 }
 
 .header-content {
@@ -61,11 +55,9 @@ header {
   margin-top: 5px;
 }
 
-/* Navbar en estado normal */
+/* ==================== NAVBAR ==================== */
 .navbar {
-  position: relative; /* empieza en flujo normal */
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 10px 0;
@@ -75,20 +67,22 @@ header {
   border-radius: 0 0 12px 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 999;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Estado fijo (cuando se vuelve flotante) */
 .navbar.fixed {
   position: fixed;
-  top: 0; /* pegada arriba */
+  top: 0;
   left: 0;
+  background-color: #d4f0fc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* Lista y enlaces */
+/* Lista de links */
 .navbar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .navbar li {
@@ -105,21 +99,37 @@ header {
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0, 128, 255, 0.2);
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #003344;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 .navbar a:hover {
   background-color: #a8e4fc;
   color: #003344;
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-2px);
 }
-/* Contenido principal */
+
+/* ==================== CONTENIDO PRINCIPAL ==================== */
 main {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* Secciones */
 section {
   background-color: #ffffff;
   padding: 30px;
@@ -163,16 +173,10 @@ h2::after {
 }
 
 /* Listas */
-ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
+ul { padding-left: 20px; list-style-type: disc; }
+li { margin-bottom: 8px; }
 
-li {
-  margin-bottom: 8px;
-}
-
-/* Footer */
+/* ==================== FOOTER ==================== */
 footer {
   background-color: #83d6f7;
   color: #666;
@@ -184,7 +188,7 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Animaciones */
+/* ==================== ANIMACIONES ==================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -200,19 +204,7 @@ footer {
   50% { box-shadow: 0 0 20px rgba(58, 12, 163, 0.6); }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .header-content { flex-direction: column; align-items: flex-start; }
-  .logo { width: 70px; }
-  .header-text h1 { font-size: 1.8rem; }
-  .header-text h3 { font-size: 1rem; }
-  .navbar li { display: block; margin: 10px 0; }
-  main { gap: 20px; }
-  section { padding: 20px; }
-  footer { font-size: 0.85rem; padding: 14px; }
-}
-
-/* Botón flotante "Volver a Eco Pacific" */
+/* ==================== BOTÓN FLOTANTE ==================== */
 .boton-flotante {
   position: fixed;
   bottom: 20px;
@@ -235,7 +227,7 @@ footer {
   background: linear-gradient(135deg, #3a0ca3, #00b4d8);
 }
 
-/* Imágenes en secciones */
+/* ==================== IMÁGENES Y GALERÍA ==================== */
 section img {
   width: 100%;
   max-width: 500px;
@@ -252,7 +244,6 @@ section img:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 50, 0.2);
 }
 
-/* Galería de imágenes */
 .galeria-contenedor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -272,7 +263,7 @@ section img:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Botón volver al inicio */
+/* ==================== BOTÓN VOLVER AL INICIO ==================== */
 .volver-inicio {
   position: fixed;
   bottom: 25px;
@@ -295,9 +286,21 @@ section img:hover {
   box-shadow: 0 0 12px rgba(245, 245, 244, 0.5);
 }
 
-/* Animación de aparición al hacer scroll */
+/* ==================== SCROLL ANIM ==================== */
 .scroll-anim {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease-out;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .header-content { flex-direction: column; align-items: flex-start; }
+  .logo { width: 70px; }
+  .header-text h1 { font-size: 1.8rem; }
+  .header-text h3 { font-size: 1rem; }
+  .navbar li { display: block; margin: 8px 0; }
+  main { gap: 20px; }
+  section { padding: 20px; }
+  footer { font-size: 0.85rem; padding: 14px; }
 }

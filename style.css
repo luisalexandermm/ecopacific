@@ -1,4 +1,6 @@
-/* ========== RESET & BASE ========== */
+/* ==========================================
+   RESET & BASE
+========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,18 +9,36 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fafaec;
+  background: #ffffff; /* fondo blanco general */
   color: #161816;
   line-height: 1.6;
-  padding: 0 20px;
+  padding: 0 20px 40px;
+}
+/* ==========================================
+   TEXTOS Y DEFINICIONES
+========================================== */
+p, li {
+  font-size: 1.1rem; /* antes 1rem */
+  line-height: 1.7;  /* un poco más de espacio entre líneas */
+  color: #333;
 }
 
-/* ========== HEADER ========== */
-header {
+.mensaje-energia {
+  font-size: 1.1rem; /* antes 1rem */
+}
 
-  box-shadow: 0 4px 8px rgba(252, 206, 137, 0.644);
-   width: 100%;
+/* En secciones principales de subpáginas */
+.subpagina p, .subpagina li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+/* ==========================================
+   HEADER
+========================================== */
+header {
+  width: 100%;
   background: linear-gradient(135deg, #3db143a4 0%, #c8e6c9 25%, #fff9e0 50%, #e0f7fa 75%, #eef0ee 100%);
+  box-shadow: 0 4px 8px rgba(252, 206, 137, 0.644);
 }
 
 .header-content {
@@ -43,7 +63,7 @@ header {
   width: 100%;
 }
 
-header h1, header h3{
+header h1, header h3 {
   color: #1b2b1b;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
@@ -55,16 +75,7 @@ header h1 {
   font-weight: bold;
 }
 
-header h3 h {
-  font-size: 1.2em;
-  font-weight: normal;
-}
-.h2 {
-  color: #2e7d32;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-h1:hover, h3:hover h2:hover {
+h1:hover, h3:hover, h2:hover {
   color: #000;
   font-weight: bold;
 }
@@ -74,7 +85,6 @@ h1:hover, h3:hover h2:hover {
     flex-direction: column;
     padding: 10px;
   }
-
   .logo {
     position: static;
     margin: 0 auto 15px;
@@ -82,26 +92,17 @@ h1:hover, h3:hover h2:hover {
     width: 100px;
   }
 }
- /*seccion de los graficos*/
- .graficos{
-   background-color: linear-gradient(135deg, #3db143a4 0%, #c8e6c9 25%, #fff9e0 50%, #e0f7fa 75%, #eef0ee 100%);
-   margin: 50px 20px;
-   padding: 20px;
-   border-radius: 20px;
-   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-   color: #007a4e;
- 
-   
-   
- }
-/* ========== NAVBAR ========== */
+
+/* ==========================================
+   NAVBAR
+========================================== */
 .navbar {
   margin-top: 20px;
   background: linear-gradient(135deg,  #dcf7dc 0%, #e3fcff 50%, #fff7d7 100%);
-  padding: 10px 0; color: #000;
+  padding: 10px 0;
+  color: #000;
   border-radius: 10px;
   border: 2px solid #e5f0e5;
-  box-shadow: 10px;
 }
 
 .navbar ul {
@@ -135,11 +136,9 @@ h1:hover, h3:hover h2:hover {
   border-color: #ffffff;
 }
 
-.subnav {
-  margin-top: 10px;
-}
-
-/* ========== MAIN SECTIONS ========== */
+/* ==========================================
+   MAIN SECTIONS
+========================================== */
 main {
   max-width: 1000px;
   margin: 30px auto;
@@ -155,23 +154,14 @@ section {
   animation: fadeIn 1s ease-in-out;
 }
 
-.queson {
-  background-color: #ffffff;
-}
+.queson { background-color: #ffffff; }
+.features { background-color: #fff9e0; }
+.tech { background-color: #e0f7fa; }
+.why { background-color: #e5f0e5; }
 
-.features {
-  background-color: #fff9e0;
-}
-
-.tech {
-  background-color: #e0f7fa;
-}
-
-.why {
-  background-color: #e5f0e5;
-}
-
-/* ========== ENCUESTA ========== */
+/* ==========================================
+   ENCUESTA
+========================================== */
 .encuesta {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
@@ -209,44 +199,33 @@ section {
   margin-top: 15px;
   font-weight: bold;
 }
-/* ========== SUBPÁGINAS ENERGÍA RENOVABLE ========== */
+
+/* ==========================================
+   SUBPÁGINAS ENERGÍA RENOVABLE
+========================================== */
 .subpagina {
-  display: none;
-  margin-top: 30px;
-  padding: 25px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  margin: 50px 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
   opacity: 0;
   transform: translateY(20px);
-  animation-fill-mode: forwards;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .subpagina header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.subpagina .logo {
-  width: 60px;
-  height: auto;
-}
+.energia-icono { width: 60px; height: auto; animation: pulse 2s infinite ease-in-out; }
 
-.subpagina h2 {
-  font-size: 1.8rem;
-  color: #2e7d32;
-}
+.subpagina h2 { font-size: 1.8rem; color: #2e7d32; }
+.subpagina p { font-size: 1rem; color: #333; }
 
-.subpagina p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Mostrar solo la subpágina activa con animación */
+/* Mostrar solo la subpágina activa */
 #solar:target,
 #eolica:target,
 #hidraulica:target,
@@ -257,209 +236,112 @@ section {
   transform: translateY(0);
 }
 
-/* Estilos diferenciados por tipo */
-/* solar.html*/
-/* Encabezado solar */
-.energia-header.solar {
-  background: #fff7e0;
-  color: #222;
+/* Temas por tipo de energía */
+.solar { background: linear-gradient(135deg, #faf8ed, #fafafa); color: #3a3000; }
+.eolica { background: linear-gradient(135deg, #f6fcfd, #ffffff); color: #003c46; }
+.hidraulica { background: linear-gradient(135deg, #f7fcff, #fcfcfc); color: #111111; }
+.geotermica { background: linear-gradient(135deg, #fdf8ff, #ffffff); color: #111111; }
+.biomasa { background: linear-gradient(135deg, #f9fff9, #ffffff); color: #0a0a0a; }
+
+/* Animaciones por subpágina */
+@keyframes solarAnim { from { opacity:0; transform:scale(0.95); } to { opacity:1; transform:scale(1); } }
+@keyframes eolicaAnim { from { opacity:0; transform:translateX(-30px); } to { opacity:1; transform:translateX(0); } }
+@keyframes hidraulicaAnim { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
+@keyframes geotermicaAnim { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes biomasaAnim { from { opacity:0; transform:rotate(-2deg) scale(0.97); } to { opacity:1; transform:rotate(0deg) scale(1); } }
+
+/* ==========================================
+   GRÁFICOS
+========================================== */
+.graficos {
+  background: linear-gradient(135deg, #3db143a4 0%, #c8e6c9 25%, #fff9e0 50%, #e0f7fa 75%, #eef0ee 100%);
+  margin: 50px 20px;
   padding: 20px;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  color: #007a4e;
 }
 
-.energia-header .energia-icono {
-  width: 70px;
-  height: auto;
-}
-
-.titulo-nav {
-  flex-grow: 1; 
-}
-
-.titulo-nav h1 {
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
-
-.solar-nav a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #d49c0b;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.solar-nav a:hover {
-  color: #ffb700;
-  text-decoration: underline;
-}
-
-/* Estilo general de secciones */
-.subpagina.solar section {
-  margin-bottom: 40px;
-  background: #fff;
-  padding: 20px;
+/* ==========================================
+   DATOS HISTÓRICOS
+========================================== */
+#datos-historicos {
+  background: #f9f9f9;
+  padding: 60px 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 50px;
+  animation: fadeInSection 1.5s ease;
 }
 
-.subpagina.solar h2 {
-  color: #d49c0b;
-  margin-bottom: 10px;
-}
-
-.subpagina.solar p, .subpagina.solar li {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.subpagina.solar ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-/* Imágenes */
-.imagen {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 15px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Botón volver */
-.volver-inicio a {
-  display: inline-block;
-  margin-top: 20px;
-  background: #d49c0b;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.volver-inicio a:hover {
-  background: #c48e00;
-}
-
-/* Footer */
-footer {
+#datos-historicos h2 {
   text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: #f8f8f8;
-  color: #777;
-  font-size: 0.9rem;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #121212;
-  line-height: 1.6;
-  padding: 0 20px 40px;
-}
-
-/* ========== ENCABEZADO ========== */
-.energia-header.solar {
-  background: #fff8c4;
-  color: #1e1e1e;
-  padding: 20px 30px;
-  border-radius: 0 0 20px 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: fadeInDown 0.7s ease-in-out;
-}
-
-.energia-icono {
-  width: 60px;
-  height: auto;
-}
-
-.titulo-nav {
-  flex: 1;
-}
-
-.energia-header h1 {
   font-size: 2rem;
-  margin-bottom: 8px;
+  color: #3a0ca3;
+  margin-bottom: 20px;
 }
 
-/* NAV INTERNO */
-.solar-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.solar-nav a {
-  text-decoration: none;
-  color: #333;
-  background: #ffef9f;
-  padding: 8px 14px;
+.chart-container,
+#dataTable {
+  margin: 0 auto 40px auto;
   border-radius: 12px;
-  font-size: 0.95rem;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.solar-nav a:hover {
-  background: #ffe94d;
-  color: #000;
-}
-
-/* ========== SECCIONES ========== */
-main.subpagina.solar section {
-  background: #fdfdfd;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-  margin-top: 30px;
-}
-
-main h2 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: #222;
-}
-
-main p, main li {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-strong {
-  color: #d68900;
-}
-
-/* IMÁGENES */
-.imagen {
+#dataTable {
   width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
-  margin: 15px 0;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  border-collapse: collapse;
+  overflow: hidden;
 }
 
-/* BOTÓN DE VOLVER */
+#dataTable th, #dataTable td {
+  padding: 12px 15px;
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+
+#dataTable th { background: #00b4d8; color: #fff; font-weight: bold; }
+#dataTable tr:nth-child(even) { background: #f2f2f2; }
+
+/* ==========================================
+   CONSUMO ENERGÉTICO
+========================================== */
+#consumo-energetico {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 50px;
+}
+
+.mensaje-energia {
+  background: #ffffff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #00b4d8;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  animation: slideFadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.mensaje-energia:hover {
+  background: #f0f8ff;
+  transform: scale(1.02);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mensaje-energia:nth-child(1) { animation-delay: 0.2s; }
+.mensaje-energia:nth-child(2) { animation-delay: 0.4s; }
+.mensaje-energia:nth-child(3) { animation-delay: 0.6s; }
+
+/* ==========================================
+   BOTÓN VOLVER
+========================================== */
 .volver-inicio a {
   display: inline-block;
   margin-top: 20px;
@@ -473,121 +355,11 @@ strong {
   transition: background 0.3s;
 }
 
-.volver-inicio a:hover {
-  background-color: #ffde22;
-} 
- 
-/* FOOTER */ 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #666;  
-  font-size: 0.9rem;
-}
+.volver-inicio a:hover { background-color: #ffde22; }
 
-/* ANIMACIONES */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} 
-.solar {
-  background: linear-gradient(135deg, #f8c425, #fdd835);
-  color: #3a3000; 
-}
-.energia-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
-}
-.energia-icono {
-  width: 60px;
-  height: auto;
-}
-#solar.subpagina {
-  border-left: 6px solid #fdf7e6;
-  background-color: #ffffff;
-  animation: solarAnim 0.8s ease-in-out; 
-}
-
-#eolica.subpagina {
-  border-left: 6px solid #dff4fd;
-  background-color: #feffff;
-  animation: eolicaAnim 0.8s ease-in-out;
-}
-
-#hidraulica.subpagina {
-  border-left: 6px solid #caecfc;
-  background-color: #f9fbfc;
-  animation: hidraulicaAnim 0.8s ease-in-out;
-}
-
-#geotermica.subpagina {
-  border-left: 6px solid #fde3dc;
-  background-color: #ffffff;
-  animation: geotermicaAnim 0.8s ease-in-out;
-}
-
-#biomasa.subpagina {
-  border-left: 6px solid #e9fad6;
-  background-color: #f5f5f5;
-  animation: biomasaAnim 0.8s ease-in-out;
-} 
-/* === Estilos generales para subpáginas de energía === */
-.subpagina {
-  margin: 50px 20px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  color: #fff;
-  animation: fadeInUp 1.2s ease;
-}
-
-.energia-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-.energia-icono {
-  width: 60px;
-  height: auto;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-/* === Temas por tipo de energía === */
-.solar {
-  background: linear-gradient(135deg, #faf8ed, #fafafa);
-  color: #3a3000;
-}
-
-.eolica {
-  background: linear-gradient(135deg, #f6fcfd, #ffffff);
-  color: #003c46;
-}
-
-.hidraulica {
-  background: linear-gradient(135deg, #f7fcff, #fcfcfc);
-  color: #111111;
-}
-
-.geotermica {
-  background: linear-gradient(135deg, #fdf8ff, #ffffff);
-  color: #111111;
-}
- 
-.biomasa {
-  background: linear-gradient(135deg, #f9fff9, #ffffff);
-  color: #0a0a0a;
-}
-
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -595,148 +367,18 @@ footer {
   gap: 15px;
   margin-top: 20px;
 }
+
 .social-icons img {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
 }
-.social-icons img:hover {
-  transform: scale(2);
-}
 
-/* === Animaciones === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.social-icons img:hover { transform: scale(2); }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.08);
-    opacity: 0.8;
-  }
-}
-/* ==== DATOS HISTÓRICOS ==== */
-#datos-historicos {
-    background: #f9f9f9;
-    padding: 60px 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    margin-top: 50px;
-    animation: fadeInSection 1.5s ease;
-}
-
-#datos-historicos h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #3a0ca3;
-    margin-bottom: 20px;
-}
-
-/* Contenedor del gráfico */
-.chart-container {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* Tabla de datos */
-#dataTable {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-#dataTable th, 
-#dataTable td {
-    padding: 12px 15px;
-    text-align: center;
-    font-size: 1rem;
-    color: #333;
-}
-
-#dataTable th {
-    background: #00b4d8;
-    color: #fff;
-    font-weight: bold;
-}
-
-#dataTable tr:nth-child(even) {
-    background: #f2f2f2;
-}
-
-/* Animación de entrada */
-@keyframes fadeInSection {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Ajuste responsive */
-@media (max-width: 768px) {
-    #datos-historicos h2 {
-        font-size: 1.6rem;
-    }
-    .chart-container {
-        padding: 15px;
-    }
-}
-/* ========== ANIMACIONES POR SUBPÁGINA ========== */
-
-/* Solar: Fade + escalar */
-@keyframes solarAnim {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-/* Eólica: Fade + deslizar desde la izquierda */
-@keyframes eolicaAnim {
-  from { opacity: 0; transform: translateX(-30px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-/* Hidráulica: Fade + deslizar desde la derecha */
-@keyframes hidraulicaAnim {
-  from { opacity: 0; transform: translateX(30px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-/* Geotérmica: Fade + desde abajo */
-@keyframes geotermicaAnim {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Biomasa: Fade + rotación ligera */
-@keyframes biomasaAnim {
-  from { opacity: 0; transform: rotate(-2deg) scale(0.97); }
-  to   { opacity: 1; transform: rotate(0deg) scale(1); }
-}
-/* ========== FOOTER ========== */
+/* ==========================================
+   FOOTER
+========================================== */
 footer {
   text-align: center;
   padding: 15px 0;
@@ -748,64 +390,44 @@ footer {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* ========== ANIMACIONES ========== */
+/* ==========================================
+   ANIMACIONES
+========================================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-/* ==== CONSUMO ENERGÉTICO ==== */
-#consumo-energetico {
-    background: #f9f9f9;
-    padding: 50px 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    margin-top: 50px;
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mensajes animados */
-.mensaje-energia {
-    background: #ffffff;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    border-left: 5px solid #00b4d8;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #333;
-    animation: slideFadeIn 1.2s ease forwards;
-    opacity: 0;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animación de entrada con deslizamiento */
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes slideFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Efecto hover */
-.mensaje-energia:hover {
-    background: #f0f8ff;
-    transform: scale(1.02);
-    transition: transform 0.3s ease, background 0.3s ease;
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.8; }
 }
 
-/* Efecto en cadena */
-.mensaje-energia:nth-child(1) {
-    animation-delay: 0.2s;
-}
-.mensaje-energia:nth-child(2) {
-    animation-delay: 0.4s;
-}
-.mensaje-energia:nth-child(3) {
-    animation-delay: 0.6s;
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 768px) {
+  #datos-historicos h2 { font-size: 1.6rem; }
+  .chart-container { padding: 15px; }
+  .navbar li { display: block; margin: 10px 0; }
 }
