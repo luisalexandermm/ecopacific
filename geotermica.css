@@ -7,7 +7,7 @@ body {
   color: #4d3b2f;
   line-height: 1.6;
   padding-top: 0; /* Ya no reservamos espacio extra para header+nav flotante */
-}
+} 
 
 /* Encabezado */
 header {
